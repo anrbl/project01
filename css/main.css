@@ -1,0 +1,134 @@
+.header {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 999;
+}
+
+.header h1 img {
+    width: 90px;
+    height: auto;
+}
+
+.header h1 span {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+nav {
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    transform: translate(0, -50%);
+    z-index: 999;
+}
+
+nav li a {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 30px;
+    font-size: 0;
+}
+
+nav li a::after {
+    content: '01';
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 30px;
+    height: 1px;
+    background: #000;
+    transition: 0.5s;
+
+}
+
+nav li.on a::after {
+    width: 100px;
+}
+
+.section figure {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 30px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(0, 0, 0, 0.2);
+    transform: translate(0, 100px);
+    opacity: 0;
+    transition: 0.5s 1s;
+}
+
+.section.on figure::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 20px;
+    background: #b8b8b8;
+    border-radius: 50%;
+    transform: rotate(-25deg);
+}
+
+.section.on figure {
+    border-radius: 10%;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.section figure img {
+    width: 100%;
+}
+
+.section:nth-child(2) {
+    background: #fff8e3;
+}
+
+.section:nth-child(4) {
+    background: #f4fff5;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translate(100px, 0);
+    transition: 0.5s 1.5s;
+}
+
+.section.on h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.section p {
+    color: #666;
+    text-align: center;
+    opacity: 0;
+    transform: translate(-100px, 0);
+    transition: 0.5s 2s;
+}
+
+.section.on p {
+    color: #666;
+    text-align: center;
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.footer {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+}
+
+.footer p {
+    font-size: 14px;
+}
