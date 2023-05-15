@@ -2,7 +2,7 @@ $(function () {
 
     //var --> const, let
     const option = {
-        anchors: ['01', '02', '03'], /* 주소에 번호를 붙이다 */
+        anchors: ['01', '02', '03', '04', '05'], /* 주소에 번호를 붙이다 */
 
         onLeave: function (index, nextIndex, direction) {
             console.log(index, nextIndex, direction)
